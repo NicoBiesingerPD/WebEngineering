@@ -1,5 +1,19 @@
-extends layout
+doctype html
+html(lang="de")
+    script(src="./javascripts/loginDocument.js")
 
-block content
-  h1= title
-  p Welcome to #{title}
+head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Meine Seite
+body
+    label(for="username_id") Username:
+    br
+    input(type="text" id="username_id" name="username")
+    br
+    label(for="password_id") Password:
+    br
+    input(type="text" id="password_id" name="password")
+    br
+    br
+    button(id="submit_button_id" value="Submit" onclick="sendFormula('username_id'),sendFormula('password_id')")
